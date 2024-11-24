@@ -9,30 +9,42 @@ The `ValidationResult` class represents the outcome of a validation process, enc
 ```csharp
 var request = new CreateUserRequest
 {
-    Username = "Timothy",
-    Email = "email@gmail.com",
-    Age = 42,
+    Username = "Brangelina",
+    Password = "O6kNG1EDftZOWCf",
+    Email = "john@example.com",
+    Age = 30,
 };
 
-using var result = request.Validate();
+// Call the .Validate() method. It returns ValidationResult which is Disposable!
+using var validationResult = request.Validate();
 
-// Use IsSuccess
-Assert.False(result.IsSuccess);
-
-// "Global" validation messages
-foreach (var message in result.Global)
+if (validationResult.IsSuccess)
 {
-    Console.WriteLine($"Global Error: {string.Format(message.Message, message.Args)}");
+    Console.WriteLine("Validation succeeded!");
 }
-
-// Analyze property-specific validation messages
-foreach (var propertyResult in result.Properties)
+else
 {
-    Console.WriteLine($"Property: {propertyResult.PropertyPath}");
-    
-    foreach (var message in propertyResult.Messages)
+    foreach (var error in validationResult.Global)
     {
-        Console.WriteLine($"  Error: {string.Format(message.Message, message.Args)}");
+        Console.WriteLine($"Error: {error.Message}");
+    }
+
+    foreach (var propertyResult in validationResult.Properties)
+    {
+        Console.WriteLine(
+            $"{propertyResult.PropertyDisplayName} is "
+                + (propertyResult.IsSuccess ? "VALID" : "INVALID:")
+        );
+
+        if (propertyResult.PropertyDisplayName != propertyResult.PropertyPath)
+        {
+            Console.WriteLine($"  property path: $.{propertyResult.PropertyPath}");
+        }
+
+        foreach (var message in propertyResult.Messages)
+        {
+            Console.WriteLine($"  - {string.Format(message.Message, message.Args)}");
+        }
     }
 }
 ```

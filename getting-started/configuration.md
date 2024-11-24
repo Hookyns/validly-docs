@@ -10,10 +10,10 @@ You can configure the source generator via properties in your `csproj` or `Direc
 
 ```xml
 <PropertyGroup>
-    <ValigatorConfiguration>
+    <ValidlyConfiguration>
         <AutoRequired>enabled</AutoRequired>
         <AutoInEnum>enabled</AutoInEnum>
-    </ValigatorConfiguration>
+    </ValidlyConfiguration>
 </PropertyGroup>
 ```
 
