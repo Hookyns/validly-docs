@@ -56,19 +56,19 @@ Install-Package Validly.SourceGenerator
 **Core package**
 
 ```xml
-<PackageReference Include="Validly" Version="1.." />
+<PackageReference Include="Validly" Version="1.3.0" />
 ```
 
 **Set of predefined validators**
 
 ```xml
-<PackageReference Include="Validly.Extensions.Validators" Version="1.." />
+<PackageReference Include="Validly.Extensions.Validators" Version="1.3.0" />
 ```
 
 **Source Generator**
 
 ```xml
-<PackageReference Include="Validly.SourceGenerator" Version="1.." />
+<PackageReference Include="Validly.SourceGenerator" Version="1.3.0" />
 ```
 
 {% hint style="info" %}

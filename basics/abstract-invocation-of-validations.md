@@ -38,11 +38,16 @@ public class ValidationFilter : IEndpointFilter
             if (argument is IValidatable validatable)
             {
                 // Invoke the validation
-                var result = await validatable.Validate(_serviceProvider);
+                using var result = await validatable.Validate(_serviceProvider);
 
                 if (!result.IsSuccess)
                 {
-                    return Results.Problem(...);
+                    return TypedResults.Content(
+        							  validationResult.GetProblemDetailsJson(),
+        							  "application/problem+json",
+        							  Encoding.UTF8,
+        							  StatusCodes.Status400BadRequest
+        						);
                 }
             }
         }
