@@ -35,19 +35,19 @@ dotnet add package Validly.SourceGenerator
 {% tab title="Package Manager Console" %}
 **Core package**
 
-```sh
+```powershell
 Install-Package Validly
 ```
 
 **Set of predefined validators**
 
-```sh
+```powershell
 Install-Package Validly.Extensions.Validators
 ```
 
-Source Generator
+**Source Generator**
 
-```sh
+```powershell
 Install-Package Validly.SourceGenerator
 ```
 {% endtab %}
@@ -56,20 +56,24 @@ Install-Package Validly.SourceGenerator
 **Core package**
 
 ```xml
-<PackageReference Include="Validly" Version="1.0.0" />
+<PackageReference Include="Validly" Version="1.." />
 ```
 
 **Set of predefined validators**
 
 ```xml
-<PackageReference Include="Validly.Extensions.Validators" Version="1.0.0" />
+<PackageReference Include="Validly.Extensions.Validators" Version="1.." />
 ```
 
-Source Generator
+**Source Generator**
 
 ```xml
-<PackageReference Include="Validly.SourceGenerator" Version="1.0.0" />
+<PackageReference Include="Validly.SourceGenerator" Version="1.." />
 ```
+
+{% hint style="info" %}
+The listed versions may not reflect the latest versions published on NuGet.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 

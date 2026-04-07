@@ -1,23 +1,14 @@
 ---
 icon: hand-wave
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Introduction
 
 <mark style="color:purple;">**Validly**</mark> is a powerful, efficient, and highly customizable validation library for .NET. It leveraging the capabilities of C# Source Generators to produce compile-time validation logic, eliminating runtime overhead. Designed to streamline model validation, Validly automatically generates validation code from attributes and custom rules, simplifying development and improving code maintainability.
 
-<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Quickstart with the <mark style="color:purple;"><strong>Validly</strong></mark></td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td>Installation</td><td>How to install <mark style="color:purple;"><strong>Validly</strong></mark></td><td></td><td></td><td><a href="getting-started/installation.md">installation.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics</td><td></td><td></td><td><a href="basics/handling-validation-result.md">handling-validation-result.md</a></td></tr><tr><td>Validators</td><td>Learn about validators</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+> Validly does not support `System.ComponentModel.DataAnnotations` attributes. Instead, it introduces custom validators to enable high performance and zero memory allocations. The attribute naming convention is inspired by both DataAnnotations and FluentValidation.
+
+<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Quickstart with the <mark style="color:purple;"><strong>Validly</strong></mark></td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td>Installation</td><td>How to install <mark style="color:purple;"><strong>Validly</strong></mark></td><td></td><td></td><td><a href="getting-started/installation.md">installation.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics</td><td></td><td></td><td><a href="basics/handling-validation-result.md">handling-validation-result.md</a></td></tr><tr><td>Validators</td><td>Learn about validators</td><td></td><td></td><td><a href="/broken/pages/DoyKb9uERRyMxVvVIET8">Broken link</a></td></tr></tbody></table>
 
 ## Key Features
 
@@ -28,6 +19,10 @@ Uses C# Source Generators to create validation code at compile-time, eliminating
 #### **Attribute-Based Validation**
 
 Define validation rules using simple attributes directly on your models, allowing clear and maintainable validation rules.
+
+#### Your Own Validation Attributes
+
+Define and use your own custom validation attributes that integrate seamlessly with Validly, enabling flexible, domain-specific validation without sacrificing performance.
 
 #### **Property and Object-Level Validation**
 

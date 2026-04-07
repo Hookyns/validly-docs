@@ -50,3 +50,5 @@ public string? FirstName { get; init; }
 public string? LastName { get; init; }
 ```
 
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td><strong>Custom Property Validation Code</strong></td><td>Learn how to write custom code to validate a property</td><td></td></tr><tr><td><strong>Before and After Validate Hooks</strong></td><td>Learn how to hook into validation, how to write custom validation code of whole model, handle and/or replace validation result</td><td></td></tr></tbody></table>
+

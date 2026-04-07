@@ -13,7 +13,12 @@
 
 * [Defining Validations](basics/defining-validations.md)
 * [Handling Validation Result](basics/handling-validation-result.md)
+* [Abstract Invocation of Validations](basics/abstract-invocation-of-validations.md)
 * [Automatically Added Validators](basics/automatically-added-validators.md)
+* [Localization](basics/localization.md)
+* [ASP.NET Core Integration](basics/asp.net-core-integration.md)
+* [Copy of ASP.NET Core Integration](basics/copy-of-asp.net-core-integration.md)
+* [Native AOT](basics/native-aot.md)
 
 ## Validators
 

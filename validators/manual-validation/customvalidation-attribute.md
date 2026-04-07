@@ -4,6 +4,8 @@ Whenever custom logic is needed to validate a property — for instance, a compl
 
 You’re free to customize the method’s signature to suit your needs—Validly will automatically update the generated interface to reflect your changes.
 
+<figure><img src="../../.gitbook/assets/validly-CustomValidation-showcase-2.gif" alt=""><figcaption><p>Showcase: Adding CustomValidation attribute in JetBrains Rider</p></figcaption></figure>
+
 {% hint style="info" %}
 It is recommended to implement the generated interface explicitly to keep it hidden during regular use of the class, ensuring a cleaner and more intuitive API.
 {% endhint %}

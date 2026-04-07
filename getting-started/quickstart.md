@@ -1,20 +1,9 @@
 ---
-icon: bullseye-arrow
 description: >-
   Welcome to the Validly Quickstart Guide! This page will help you get up and
   running with Validly in no time. By the end of this guide, you’ll have a basic
   understanding of how to validate your models
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
+icon: bullseye-arrow
 ---
 
 # Quickstart
@@ -23,8 +12,8 @@ layout:
 
 ```bash
 dotnet add package Validly
-dotnet add package Validly.Extensions.Validators
 dotnet add package Validly.SourceGenerator
+dotnet add package Validly.Extensions.Validators
 ```
 
 For more install options visit [Installation ](installation.md)page.
@@ -58,7 +47,7 @@ public partial class CreateUserRequest
 ```
 
 * **\[Validatable]**: Marks the class for Validly validation generation.
-* **Validation Attributes**: Define specific rules (e.g., `Required`, `MinLength`, `Between`).
+* **Validation attributes**: Define specific rules (e.g., `Required`, `MinLength`, `Between`).
 
 ## Validate Your Data
 

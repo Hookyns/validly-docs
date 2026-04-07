@@ -13,6 +13,7 @@ You can configure the source generator via properties in your `csproj` or `Direc
     <ValidlyConfiguration>
         <AutoRequired>enabled</AutoRequired>
         <AutoInEnum>enabled</AutoInEnum>
+        <ExitEarly>disabled</ExitEarly>
     </ValidlyConfiguration>
 </PropertyGroup>
 ```
@@ -21,13 +22,19 @@ You can configure the source generator via properties in your `csproj` or `Direc
 
 The `AutoRequire` property allows you to automatically apply the `[Required]` attribute to your objects. When enabled, it ensures that all properties in your object that need to be non-nullable have this attribute applied. This makes it easier to enforce validation rules without manually adding the `[Required]` attribute to each property.&#x20;
 
-This property is enabled by default. Use `<AutoRequired>disabled</AutoRequired>` in your project configuration to disable this feature.
+This property is <mark style="color:blue;">enabled by default</mark>. Use `<AutoRequired>disabled</AutoRequired>` in your project configuration to disable this feature.
 
 ### AutoInEnum
 
 The `AutoInEnum` property allow you to automatically apply the \[InEnum] attribute to yout objects. When enabled, it ensures that all enum properties in your object have this attribute applied.&#x20;
 
-This property is enabled by default. Use `<AutoInEnum>disabled</AutoInEnum>` in your project configuration to disable this feature.
+This property is <mark style="color:blue;">enabled by default</mark>. Use `<AutoInEnum>disabled</AutoInEnum>` in your project configuration to disable this feature.
+
+### ExitEarly
+
+The `ExitEarly` property modifies the validation behavior: when enabled, validation stops at the first error encountered, and no further validations are executed.
+
+This property is <mark style="color:blue;">disabled by default</mark>. Use `<ExitEarly>enabled</``ExitEarly>` in your project configuration to enable this feature.
 
 ## Override Project Configuration via Validatable Attribute
 
@@ -48,7 +55,7 @@ public partial class CreateUserRequest
 
 ## Runtime Options
 
-To configure the runtime of the validation you can you static class `ValidlyOptions`.
+To configure the runtime of the validation you can use static class `ValidlyOptions`.
 
 ```csharp
 ValidlyOptions.Configure(cfg =>
