@@ -43,11 +43,11 @@ public class ValidationFilter : IEndpointFilter
                 if (!result.IsSuccess)
                 {
                     return TypedResults.Content(
-        							  validationResult.GetProblemDetailsJson(),
-        							  "application/problem+json",
-        							  Encoding.UTF8,
-        							  StatusCodes.Status400BadRequest
-        						);
+                        validationResult.GetProblemDetailsJson(),
+                        "application/problem+json",
+                        Encoding.UTF8,
+                        StatusCodes.Status400BadRequest
+                    );
                 }
             }
         }
